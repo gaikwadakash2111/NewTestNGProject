@@ -7,7 +7,7 @@
         <methods>
           <include name="setUp"/>
           <include name="tearDown"/>
-          <include name="testLogout"/>
+          <include name="verifyAddToCartPage"/>
         </methods>
       </class> <!-- tests.LoginTest -->
     </classes>

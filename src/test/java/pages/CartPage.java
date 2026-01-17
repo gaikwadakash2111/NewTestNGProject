@@ -9,6 +9,7 @@ public class CartPage {
 
     private By cartItemName = By.className("inventory_item_name");
     private By checkoutButton = By.id("checkout");
+    private By continueShoppingCTA = By.id("continue-shopping");
 
     public CartPage(WebDriver driver) {
         this.driver = driver;
@@ -21,4 +22,17 @@ public class CartPage {
     public void clickCheckout() {
         driver.findElement(checkoutButton).click();
     }
+
+	public boolean verifyContinuShoppingCTA() {
+		return driver.findElement(continueShoppingCTA).isDisplayed();
+	}
+    
+    public void clickOnContinueShopping()
+    {
+    	driver.findElement(continueShoppingCTA).click();
+    }
+
+	public String verifyPresenceOfYourCartPage() {
+		return driver.getTitle();
+	}
 }

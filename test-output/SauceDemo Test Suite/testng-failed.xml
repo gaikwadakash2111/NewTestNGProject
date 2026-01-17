@@ -10,6 +10,7 @@
           <include name="testLogout"/>
           <include name="tearDown"/>
           <include name="testAddProductToCart"/>
+          <include name="verifyAddToCartPage"/>
           <include name="testInvalidLogin"/>
           <include name="testCompleteCheckout"/>
         </methods>

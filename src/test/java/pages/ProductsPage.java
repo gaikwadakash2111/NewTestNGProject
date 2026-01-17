@@ -38,4 +38,8 @@ public class ProductsPage {
         }
         driver.findElement(logoutLink).click();
     }
+
+	public String getURLOfProductPage() {
+		return driver.getCurrentUrl();
+	}
 }

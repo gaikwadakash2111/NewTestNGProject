@@ -59,4 +59,22 @@ public class LoginTest extends BaseTest {
         checkoutPage.finishCheckout();
         Assert.assertEquals(checkoutPage.getConfirmationMessage(), "Thank you for your order!");
     }
+    
+    @Test
+    public void verifyAddToCartPage()
+    {
+    	LoginPage loginPage = new LoginPage(driver);
+    	ProductsPage productsPage = new ProductsPage(driver);
+    	CartPage cartPage = new CartPage(driver);
+    	loginPage.login("problem_user", "secret_sauce");
+    	productsPage.goToCart();
+    	//cartPage.verifyPresenceOfYourCartPage();
+    	Assert.assertEquals(cartPage.verifyPresenceOfYourCartPage(), "Swag Labs");	
+    }
+    
+    @Test
+    public void verifyLogout()
+    {
+    	System.out.println("script for logout process");
+    }
 }
